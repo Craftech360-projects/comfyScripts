@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the base path for the Stable Diffusion models
-BASE_PATH="./"
+BASE_PATH="/home/runner/ComfyUI/models"
 
 # Create directories if they don't exist
 mkdir -p "$BASE_PATH/checkpoints"
