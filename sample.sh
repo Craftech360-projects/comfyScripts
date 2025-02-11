@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Define the base path for the models
-BASE_PATH="/home/runner/ComfyUI/models"
+# Define the base path where models should be downloaded
+BASE_PATH="$HOME/ComfyUI/models"
 
-# Create necessary directories if they don't exist
+# Create necessary directories
 mkdir -p "$BASE_PATH/facerestore_models"
 mkdir -p "$BASE_PATH/facedetection"
 mkdir -p "$BASE_PATH/insightface"
@@ -17,4 +17,4 @@ curl -L -o "$BASE_PATH/facedetection/retinaface_resnet50.onnx" "https://huggingf
 curl -L -o "$BASE_PATH/insightface/inswapper_128.onnx" "https://huggingface.co/ezioruan/inswapper_128.onnx/resolve/main/inswapper_128.onnx"
 
 # Completion message
-echo "Download complete! Files are stored in the appropriate folders."
+echo "Download complete! Files are stored in $BASE_PATH."
