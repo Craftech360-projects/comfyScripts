@@ -20,5 +20,7 @@ curl -L -o "$BASE_PATH/insightface/inswapper_128.onnx" "https://huggingface.co/e
 # Download ahxl_v1.safetensors model into checkpoints
 curl -L -o "$BASE_PATH/checkpoints/ahxl_v1.safetensors" "https://huggingface.co/nahuiyang/custom/resolve/88ce5013c565938aa33daa9cf4ce7cba446a85e2/ahxl_v1.safetensors"
 
+curl -L -o "$BASE_PATH/checkpoints/realistic.safetensors" "https://civitai.com/api/download/models/353332?type=Model&format=SafeTensor&size=pruned&fp=fp32"
+
 # Completion message
 echo "Download complete! Files are stored in $BASE_PATH."
