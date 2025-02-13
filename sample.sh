@@ -54,8 +54,8 @@ download_if_not_exist "$BASE_PATH/checkpoints/realistic.safetensors" "https://ci
 download_if_not_exist "$BASE_PATH/loras/cap.safetensors" "https://civitai.com/api/download/models/87011?type=Model&format=SafeTensor"
 
 # Clone or update the required custom nodes
-clone_or_update_repo "https://github.com/pythongosssss/ComfyUI-ReActor.git" "ComfyUI-ReActor"
-clone_or_update_repo "https://github.com/ltdrdata/comfyui-saveimage-plus.git" "comfyui-saveimage-plus"
+clone_or_update_repo "https://github.com/Gourieff/ComfyUI-ReActor.git" "ComfyUI-ReActor"
+clone_or_update_repo "https://github.com/Goktug/comfyui-saveimage-plus.git" "comfyui-saveimage-plus"
 
 # Install dependencies for the custom nodes
 echo "Installing dependencies for ComfyUI..."
