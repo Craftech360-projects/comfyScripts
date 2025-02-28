@@ -19,7 +19,7 @@ download_if_not_exist() {
     
     if [ ! -f "$file_path" ]; then
         echo "Downloading: $file_path"
-        curl -L -o "$file_path" "$url"
+        wget -O "$file_path" "$url"
     else
         echo "File already exists: $file_path"
     fi
