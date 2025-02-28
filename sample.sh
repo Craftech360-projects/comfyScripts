@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the base path for models and custom nodes
-BASE_PATH="$HOME/ComfyUI/models"
-CUSTOM_NODES_PATH="$HOME/ComfyUI/custom_nodes"
+BASE_PATH="../models"
+CUSTOM_NODES_PATH="../custom_nodes"
 
 # Create necessary directories if they don't exist
 mkdir -p "$BASE_PATH/checkpoints"
