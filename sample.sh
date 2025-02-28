@@ -6,10 +6,10 @@ CUSTOM_NODES_PATH="$HOME/ComfyUI/custom_nodes"
 
 # Create necessary directories if they don't exist
 mkdir -p "$BASE_PATH/checkpoints"
-mkdir -p "$BASE_PATH/facerestore_models"
-mkdir -p "$BASE_PATH/facedetection"
-mkdir -p "$BASE_PATH/insightface"
+mkdir -p "$BASE_PATH/LLM"
+mkdir -p "$BASE_PATH/pulid"
 mkdir -p "$BASE_PATH/loras"
+mkdir -p "$BASE_PATH/pulidflux"
 mkdir -p "$CUSTOM_NODES_PATH"
 
 # Function to download file if it doesn't exist
@@ -41,17 +41,17 @@ clone_or_update_repo() {
 }
 
 # Download Stable Diffusion models
-download_if_not_exist "$BASE_PATH/facerestore_models/codeformer-v0.1.0.pth" "https://huggingface.co/ziixzz/codeformer-v0.1.0.pth/resolve/main/codeformer-v0.1.0.pth"
+download_if_not_exist "$BASE_PATH/loras/alimama-creative-FLUX.1-Turbo-Alpha.safetensors" "https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/resolve/main/diffusion_pytorch_model.safetensors"
 
-download_if_not_exist "$BASE_PATH/facedetection/retinaface_resnet50.onnx" "https://huggingface.co/OWG/resnet-50/resolve/main/onnx/model.onnx"
+download_if_not_exist "$BASE_PATH/checkpoints/flux1-dev-fp8.safetensors" "https://huggingface.co/lllyasviel/flux1_dev/resolve/main/flux1-dev-fp8.safetensors"
 
-download_if_not_exist "$BASE_PATH/insightface/inswapper_128.onnx" "https://huggingface.co/ezioruan/inswapper_128.onnx/resolve/main/inswapper_128.onnx"
+download_if_not_exist "$BASE_PATH/loras/DollCute.safetensors" "https://civitai.com/api/download/models/886096?type=Model&format=SafeTensor"
 
-download_if_not_exist "$BASE_PATH/checkpoints/ahxl_v1.safetensors" "https://huggingface.co/nahuiyang/custom/resolve/88ce5013c565938aa33daa9cf4ce7cba446a85e2/ahxl_v1.safetensors"
+download_if_not_exist "$BASE_PATH/LLM/CogFlorence-2.2-Large.safetensors" "https://huggingface.co/thwri/CogFlorence-2.2-Large/resolve/main/model.safetensors"
 
-download_if_not_exist "$BASE_PATH/checkpoints/realistic.safetensors" "https://civitai.com/api/download/models/353332?type=Model&format=SafeTensor&size=pruned&fp=fp32"
+download_if_not_exist "$BASE_PATH/pulidflux/pulid_flux_v0.9.0.safetensors" "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.0.safetensors"
 
-download_if_not_exist "$BASE_PATH/loras/cap.safetensors" "https://civitai.com/api/download/models/87011?type=Model&format=SafeTensor"
+download_if_not_exist "$BASE_PATH/pulid/pulid_flux_v0.9.0.safetensors" "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.0.safetensors"
 
 # Clone or update the required custom nodes
 clone_or_update_repo "https://github.com/Gourieff/ComfyUI-ReActor.git" "ComfyUI-ReActor"
